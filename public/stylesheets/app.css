@@ -1,0 +1,103 @@
+/* CSS goes here */
+#navigation-container {
+    display: block;
+    font-family: 'Tahoma';
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+    background: darkcyan;
+}
+
+#site-name {
+  background: darkcyan;
+  margin: 0px 0px;
+}
+
+#caption-click {
+  text-align: center;
+  font-family: tahoma;
+  margin: 0px
+}
+
+#Logo-Photo {
+    display: table;
+    width: auto;
+    margin: auto;
+}
+
+#team-names {
+  margin: 0px auto;
+  width: 40%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+#roster_title {
+  font-size: 2em;
+  border: none;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0px;
+  font-family: tahoma;
+}
+
+table {
+  border: 0px solid green;
+  height: 100%;
+  width: 50%;
+  font-family: sans-serif;
+  margin: auto;
+  padding: 4rem;
+  text-align: center;
+}
+
+div {
+    display: block;
+}
+
+th {
+  height: 3rem;
+  width: 20rem;
+  border: 0px;
+  font-size: 2rem;
+  text-align: center;
+  column-span: 2;
+}
+
+a {
+  font-family: tahoma;
+  font-weight: normal;
+}
+
+#team-roster {
+  text-align: center;
+}
+body {
+  display: block;
+  height: 95%;
+}
+
+footer {
+  font-family: 'Tahoma';
+  text-align: center;
+  font-size: 1em;
+  color: #ffffff;
+  background: darkcyan;
+  position: relative;
+  right: 0;
+  top: 95%;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer, table {
+  padding: 0;
+}
