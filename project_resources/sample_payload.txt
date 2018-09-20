@@ -1,0 +1,9 @@
+{
+    'creative_uuid': 'http://image.email-orvis.com/lib/fe8b13727662037f7c/m/7/cb607085-262b-4c5a-b048-759aab3e6769.jpg',
+    'landing_page_url': 'http://www.orvis.com/mens-shirts',
+    'alt_text': '&quot;This is the kind of shirt you could wear every day and do anything.&quot; —ORVIS CUSTOMER',
+    'headline': 'TECHNICAL PERFORMANCE WITH CASUAL STYLE',
+    'body_copy': 'Our ever-popular Tech Chambray Work Shirt boasts mechanical stretch and quick-dry fabric. Styled like an authentic chambray work shirt, it&#x27;s ideal for work days, fishing days, and every day in between.',
+    'call_to_action': 'SHOP SHIRTS',
+    'use_promotional_cta': False,
+}

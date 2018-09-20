@@ -2,6 +2,13 @@ source "https://rubygems.org"
 
 gem "pry"
 gem "rspec"
-gem "sinatra", "~> 2.0"
+gem "sinatra"
 gem "sinatra-contrib"
-gem "capybara"
+gem 'rest-client'
+gem 'pg'
+gem 'grabzit'
+gem 'envkey'
+gem 'screencap'
+gem 'webshot'
+
+gem 'phantomjs', :require => 'phantomjs/poltergeist'

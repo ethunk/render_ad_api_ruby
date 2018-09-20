@@ -1,0 +1,226 @@
+<style type="text/css">
+/*FONT VARIABLES*/
+<% binding.pry %>
+<% if variables %>
+  <% variables = variables%>
+  <% else %>
+  <% variables = {} %>
+<% end %>
+<% @color = { red: '#ff5d3f', light: '#a0eaf3', dark: '#9c9d9d'} %>
+
+
+@font-face {
+    font-family: 'HN-Thin';
+    src: url("/sbd/cre/_lib/fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot");
+    src: url("/sbd/cre/_lib/fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"), url("/sbd/cre/_lib/fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg"); }
+
+  @font-face {
+    font-family: 'HN-Light';
+    src: url("/sbd/cre/_lib/fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot");
+    src: url("/sbd/cre/_lib/fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff"), url("/sbd/cre/_lib/fonts/688ab72b-4deb-4e15-a088-89166978d469.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/7816f72f-f47e-4715-8cd7-960e3723846a.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg"); }
+
+  @font-face {
+    font-family: 'HN-Roman';
+    src: url("/sbd/cre/_lib/fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot");
+    src: url("/sbd/cre/_lib/fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"), url("/sbd/cre/_lib/fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg"); }
+
+  @font-face {
+    font-family: 'HN-Medium';
+    src: url("/sbd/cre/_lib/fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot");
+    src: url("/sbd/cre/_lib/fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/60be5c39-863e-40cb-9434-6ebafb62ab2b.woff") format("woff"), url("/sbd/cre/_lib/fonts/4c6503c9-859b-4d3b-a1d5-2d42e1222415.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/36c182c6-ef98-4021-9b0d-d63122c2bbf5.svg#36c182c6-ef98-4021-9b0d-d63122c2bbf5") format("svg"); }
+
+  @font-face {
+    font-family: 'HN-Bold';
+    src: url("/sbd/cre/_lib/fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot");
+    src: url("/sbd/cre/_lib/fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/14ff6081-326d-4dae-b778-d7afa66166fc.woff") format("woff"), url("/sbd/cre/_lib/fonts/8fda1e47-19be-46c7-8d83-8d4fb35572f0.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/f751c8ae-1057-46d9-8d74-62592e002568.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg"); }
+
+  @font-face {
+    font-family: 'HNC-Bold';
+    src: url("/sbd/cre/_lib/fonts/83d5bc89-af33-46a9-8fe3-15d87784f50e.eot");
+    src: url("/sbd/cre/_lib/fonts/83d5bc89-af33-46a9-8fe3-15d87784f50e.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/102ab74c-0e84-4fe5-a17a-b20fb643591a.woff") format("woff"), url("/sbd/cre/_lib/fonts/1d146b29-55e2-485b-96aa-5cb628e7e9eb.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/d90b3358-e1e2-4abb-ba96-356983a54c22.svg#d90b3358-e1e2-4abb-ba96-356983a54c22") format("svg"); }
+
+  @font-face {
+    font-family: 'HNC-Heavy';
+    src: url("/sbd/cre/_lib/fonts/3d1a3114-ffd3-4f16-99c5-0e0441676d88.eot");
+    src: url("/sbd/cre/_lib/fonts/3d1a3114-ffd3-4f16-99c5-0e0441676d88.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/33bb86d1-8adf-454e-aee3-ca1c89445476.woff") format("woff"), url("/sbd/cre/_lib/fonts/921ef834-872c-4460-ac11-f5fbcac9fa2d.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/9d3bb5f2-6932-419e-a56f-382131ffd4b8.svg#9d3bb5f2-6932-419e-a56f-382131ffd4b8") format("svg"); }
+
+  @font-face {
+    font-family: 'HNC-Black';
+    src: url("/sbd/cre/_lib/fonts/978fc490-bc85-49a5-a85d-d28703cdeb3b.eot");
+    src: url("/sbd/cre/_lib/fonts/978fc490-bc85-49a5-a85d-d28703cdeb3b.eot?#iefix") format("embedded-opentype"), url("/sbd/cre/_lib/fonts/58310d61-40ac-4464-b817-30d9e9deb3bb.woff") format("woff"), url("/sbd/cre/_lib/fonts/96017e22-70f3-4c82-9620-352a5f107d90.ttf") format("truetype"), url("/sbd/cre/_lib/fonts/d7282731-5798-4d1c-90ae-efbd49632898.svg#d7282731-5798-4d1c-90ae-efbd49632898") format("svg"); }
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
+}
+
+@mixin fontproperties ($family, $fsize, $fweight){
+	font: {family: #{$family}; size:#{$fsize}; weight:#{$fweight}; }
+}
+
+@supportedBrowser : -webkit-, -moz-, -o-, -ms-, '';
+.dd-banner-container .dd-banner-inner, .dd-banner-container .dd-banner-inner div, .dd-secondary .dd-banner-inner, .dd-secondary .dd-banner-inner div {
+  display: block;
+}
+
+.container_wrapper div.cta_container_left {
+  width: 25%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container_wrapper div.cta_container_right {
+  width: 70%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cta {
+  float: left;
+  background: #fff;
+  font-family: "HelveticaNeueLTStd-Bold", Helvetica, Arial, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #444;
+  border: 1px solid #fff;
+  padding: 14px 16px 11px 16px;
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.cta:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  text-decoration: none;
+}
+
+/* #1517521558 {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  float: none;
+  background-color: #69add6;
+} */
+
+.container_wrapper {
+  width: 1000px;
+  height: 262px;
+  margin: 0 auto;
+  padding: 0;
+  float: none;
+  <% binding.pry %>
+  background: <%= @color[variables[:color_scheme]] ? @color[variables[:color_scheme]] : 'Black' %> url('<%= variables[:image] ? variables[:image] : "https://robohash.org/nil.png?size=200x200" %>') top right no-repeat;
+
+}
+
+.container_wrapper div.inner_content_container_left {
+  width: 55%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  padding: 30px 10px 30px 30px;
+}
+
+.container_wrapper div.inner_content_container_left div.left_header {
+  font-family: 'HNC-Bold';
+  font-weight: 300;
+  color: #fff;
+  font-size: 110px;
+  line-height: 110px;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.container_wrapper div.inner_content_container_left div.left_subheader {
+  font-family: 'HN-Roman';
+  font-weight: normal;
+  color: #fff;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0 0 15px 0;
+  margin: 0;
+  text-align: left;
+}
+
+.container_wrapper div.inner_content_container_left div.left_small {
+  font-family: 'HN-Roman';
+  font-weight: normal;
+  color: #fff;
+  font-size: 10px;
+  line-height: 13px;
+  padding: 25px 0 15px 5px;
+  margin: 0;
+  text-align: left;
+}
+
+.container_wrapper div.inner_content_container_right {
+  width: 32%;
+  height: auto;
+  float: left;
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 10px 20px 0;
+}
+
+.container_wrapper div.inner_content_container a {
+  margin-top: 0px;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.container_wrapper div.inner_content_container#left {
+background: url('<%= variables[:image] ? variables[:image] : "https://robohash.org/nil.png?size=200x200" %>') top right no-repeat;
+}
+
+.container_wrapper div.inner_content_container#right {
+  background: url('<%= variables[:image] ? variables[:image] : "https://robohash.org/nil.png?size=200x200" %>') top right no-repeat;
+}
+
+}
+</style>
+<!-- update id's using Epoch Time converter located here: http://www.unixtimestamp.com/ -->
+<div id="<%= variables[:id]==nil ? 1 : variables[:id] %>">
+<div class="container_wrapper">
+
+	<div class="inner_content_container_left">
+		<div class="left_header"><%= variables[:headline_text_short] ? variables[:headline_text_short] : '$nil OFF %' %></div>
+		<div class="left_subheader"><%= variables[:body_copy_short] ? variables[:body_copy_short] : 'body_copy_short_nil' %></div>
+		<div class="cta_container_left">
+			<a href="<%=variables[:landing_page_url] %>" class="cta" title=""><%= variables[:call_to_action] ? variables[:call_to_action] : "click_action"%></a>
+		</div>
+		<div class="cta_container_right">
+			<div class="left_small"><%= variables[:fine_text] ? variables[:fine_text] : 'fine_text_nil' %></div>
+		</div>
+	</div>
+
+	<div class="inner_content_container_right">
+	</div>
+
+</div>
+</div>

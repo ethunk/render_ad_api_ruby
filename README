@@ -1,0 +1,15 @@
+GETTING STARTED
+1) Install Ruby
+2) Install Bundler "gem install bundler" at the commandline
+3) run the 'bundle' command in the command line
+4) Start server using the command 'ruby app.rb' from the top level of the project directory
+5) From another command line prompt run 'ruby test_cases.rb', this will start an instance to interact with the server. You can use the example commands to pass information and write to the test.erb.
+6) Got to http://localhost:4567/test to see html view/rendered of the output. The server should write to the erb file that is loaded when you go to the 'http://localhost:4567/test' URL
+
+
+
+Other Notes:
+
+PAYLOAD
+:creative_uuid vs :image -- I've written the template so that either can be used
+:use_promotional_cta: False -- CANNOT use 'False', ruby recognizes capital letters to indicate a class object. Payload will have to use a lower case 'false' instead

@@ -1,0 +1,72 @@
+<%= '<!--[if (gte mso 9)|(IE)]>
+<table width="640" align="center" cellpadding="0" cellspacing="0" border="0">
+ <tr>
+  <td>
+  <![endif]-->' %>
+  <table width="100%" align="center" cellpadding="0" cellspacing="0" style="max-width: 640px;">
+
+    <tr>
+     <td style="text-align: center; vertical-align: top; font-size: 0px;">
+     <%= '<!--[if (gte mso 9)|(IE)]>
+     <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+      <tr>
+       <td>
+       <![endif]-->' %>
+       <div style="width: 100%; display: inline-block; vertical-align: top;">
+       <table width="100%" cellpadding="0" cellspacing="0">
+
+         <tr>
+          <td align="center" cellpadding="0" cellspacing="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 16px;">
+          <a href="<%= params[:landing_page_url] %>" title="<%= params[:image_alt_text] %>" alias="main_img" conversion="false"><img src="<%= params[:image] ? params[:image] : params[:creative_uuid] %>" alt="<%= params[:image_alt_text] %>" style="display: block; max-width: 100%;" title="<%= params[:image_alt_text] %>"></a>
+          </td>
+         </tr>
+         <tr>
+          <td align="center" cellpadding="0" cellspacing="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 16px;">&nbsp;</td>
+         </tr>
+         <tr>
+          <td align="center" cellpadding="0" cellspacing="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 16px; line-height: 1.3;" class="pad-for-mobile">
+          <p style="margin: 0px 0px 4px; padding: 0px; text-transform: uppercase; font-weight: bold;">
+          <%= params[:headline] %>
+          </p>
+          <p style="margin: 0px 0px 16px; padding: 0px; max-width: 460px;">
+          <%= params[:body_copy] %>
+          </p>
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tr>
+             <td align="center" bgcolor="<%= params[:use_promotional_cta]==true ? '#961401' : '#333333' %>" style="border: 1px solid <%= params[:use_promotional_cta]==true ? '#961401' : '#333333' %>; border-radius: 3px;">
+             <%= '<!--[if (gte mso 9)|(IE)]>
+             <table width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+               <td align="center" style="padding: 11px 17px;">
+               <![endif]-->' %>
+               <a href="<%= params[:landing_page_url] %>" target="_blank" style="font-size: 16px; font-family: Montserrat, Arial, sans-serif; color: #ffffff; display: inline-block; padding: 11px 17px; text-decoration: none; text-transform: uppercase;" title="" alias="button_link" conversion="false"><%= params[:call_to_action] %></a>
+              <%= '<!--[if (gte mso 9)|(IE)]>
+               </td>
+              </tr>
+             </table>
+             <![endif]-->' %>
+             </td>
+            </tr>
+          </table>
+          </td>
+         </tr>
+         <tr>
+          <td align="center" cellpadding="0" cellspacing="0" style="font-family: Montserrat, Arial, sans-serif; font-size: 24px;">&nbsp;</td>
+         </tr>
+
+       </table>
+       </div>
+       <%= '<!--[if (gte mso 9)|(IE)]>
+       </td>
+      </tr>
+     </table>
+     <![endif]-->' %>
+     </td>
+    </tr>
+
+  </table>
+  <%= '<!--[if (gte mso 9)|(IE)]>
+  </td>
+ </tr>
+</table>
+<![endif]-->' %>
